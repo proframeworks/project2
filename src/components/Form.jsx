@@ -4,7 +4,7 @@ import React from "react";
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     
     const inputTextHandler = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setInputText(e.target.value);
     };
     const submitTodoHandler = (e) => {
@@ -14,6 +14,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     };
     
     const statusHandler = (e) => {
+      e.preventDefault();
         setStatus(e.target.value);
     }
 
@@ -25,14 +26,17 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
         type="text" 
         className="todo-input" />
       <button onClick={submitTodoHandler} className="todo-button" type="submit"> submit
-        <i className="fas fa-plus-square"></i>
+        {/* <i className="fas fa-plus-square"></i> */}
       </button>
       <div className="select">
-        <select onChange={statusHandler} name="todos" className="filter-todo">
+        {/* <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
-          <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>
-        </select>
+          <option value="completed">Completed</option>
+          
+        </select> */}
+        <button onClick={statusHandler} name="todos" className="filter-todo" value="completed">Completed</button>
+        <button onClick={statusHandler} name="todos" className="filter-todo" value="uncompleted">Uncompleted</button>
       </div>
     </form>
     );

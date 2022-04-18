@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 //importing components
 import Form from './components/Form';
 import TodoList from './components/TodoList';
@@ -10,6 +11,10 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  // const [edit, setEdit] = useState({
+  //   id: null,
+  //   value: ''
+  // });
 
   //useEffect
   useEffect(() => {
