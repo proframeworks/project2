@@ -1,0 +1,91 @@
+body {
+    background-color: #b2cce6;
+    
+}
+header{
+    color:white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 5px 5px 15px #1a334c;
+    text-align: left;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  .ul li {
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    font-size: 18px;
+    list-style-type: none;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+    border-radius: 15px 30px;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  
+  
+  
+  
+  /* Style the delete button */
+  .delete-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .delete-btn:hover {
+    background-color: grey;
+    color: white;
+  }
+  
+  /* Style the ul */
+  .todo {
+    background-color: #1f4060;
+    color: black;
+    text-align: center;
+    border-radius: 15px 30px;
+    padding: 10px;
+    width: 500px;
+    height: 70px;
+    list-style-type: none;
+    float: center;
+  }
+  
+  
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: #1a334c;
+    border-radius: 15px 30px;
+    width: 40%;
+    padding: 10px;
+    float: center;
+    font-size: 16px;
+  }
+  
