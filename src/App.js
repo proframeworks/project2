@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-//importing components
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 
 function App() {
   
-  //state stuff
-  const [inputText, setInputText] = useState("");
+  // const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("all");
+  const [status, setStatus] = useState("uncompleted");
   const [filteredTodos, setFilteredTodos] = useState([]);
-  // const [edit, setEdit] = useState({
-  //   id: null,
-  //   value: ''
-  // });
+ // const [edit, setEdit] = useState([]);
 
-  //useEffect
   useEffect(() => {
     filterHandler();
   }, [todos, status]);
-//funcitons
+
 const filterHandler = () => {
   switch(status){
     case 'completed':
@@ -30,7 +24,7 @@ const filterHandler = () => {
       setFilteredTodos(todos.filter(todo => todo.completed === false))
       break;
     default:
-      setFilteredTodos(todos);
+      setFilteredTodos(todos.filter(todo => todo.completed === false));
       break;
   }
 }
@@ -40,10 +34,10 @@ const filterHandler = () => {
       <h1>Todo List</h1>
     </header>
     <Form 
-      inputText={inputText} 
+      //inputText={inputText} 
       todos={todos} 
       setTodos={setTodos} 
-      setInputText={setInputText}
+      //setInputText={setInputText}
       setStatus={setStatus}
       />
     <TodoList 
